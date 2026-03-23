@@ -1,0 +1,50 @@
+header{
+    padding: 20px 2%;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .wraper-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+header .wraper-logo h1{
+    font-size: 18px;
+    color: black;
+}
+
+header .logo{
+    width: 70px;
+}
+
+header .menu-mobile{
+    display: none;
+}
+
+header nav.menu-desktop ul{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li a{
+    text-decoration: none;
+    color: #65758B;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+header nav.menu-desktop ul li a:hover{
+    color: black;
+}

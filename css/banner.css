@@ -1,0 +1,13 @@
+.banner{
+    padding-top: 230px;
+    padding-bottom: 130px;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: var(--corSecundaria);
+    text-align: center;
+}
+
+.banner p{
+    line-height: 26px;
+    margin: 20px 0;
+}

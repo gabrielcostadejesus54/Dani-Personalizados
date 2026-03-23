@@ -7,7 +7,7 @@
         display: none;
     }
 
-    .menu-mobile{
+    header .menu-mobile{
         display: block;
         order: 1;
     }
@@ -47,6 +47,12 @@
         font-size: 24px;
         cursor: pointer;
         color: #65758B;
+    }
+
+    /* banner */
+
+    .banner h1{
+        font-size: 36px;
     }
     
 }
