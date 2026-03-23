@@ -1,0 +1,45 @@
+.oferecimento{
+    padding: 80px 2%;
+}
+
+.oferecimento .container{
+    text-align: center;
+}
+
+.oferecimento .wraper-oferecimento{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.oferecimento .card{
+    background-color: var(--corSecundaria);
+    padding: 30px 50px;
+    max-width: 384px;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.oferecimento .card i{
+    color: var(--corPrincipal);
+    background-color: #EEEBF6;
+    padding: 20px;
+    border-radius: 7px;
+    display: inline-block;
+    margin: 15px auto;
+}
+
+.oferecimento .card h3{
+    margin-bottom: 12px;
+}
+
+.oferecimento .card p{
+    line-height: 1.5;
+}
+
+.oferecimento .button{
+    margin-top: 50px;
+}
