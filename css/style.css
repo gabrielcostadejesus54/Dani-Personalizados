@@ -50,6 +50,10 @@ p{
 /* header */
 header{
     padding: 20px 2%;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
 }
 
 header .container{
