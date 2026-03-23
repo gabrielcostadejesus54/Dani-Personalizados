@@ -24,9 +24,6 @@ header .wraper-logo h1{
     color: black;
 }
 
-header .logo{
-    width: 70px;
-}
 
 header .menu-mobile{
     display: none;

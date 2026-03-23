@@ -19,6 +19,10 @@
     --corSecundaria: #F8FAFC;
 }
 
+.logo{
+    width: 70px;
+}
+
 p{
     color: #65758B;
     font-size: 14px;

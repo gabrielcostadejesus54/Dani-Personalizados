@@ -1,0 +1,43 @@
+.footer{
+    padding: 60px 2%;
+    background-color: var(--corSecundaria);
+}
+
+.footer .wraper-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.footer .wraper-footer .inicio p{
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.footer .wraper-footer .navegacao ul{
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.footer .wraper-footer .navegacao ul li{
+    margin-bottom: 10px;
+}
+
+.footer .wraper-footer .navegacao ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #65758B;
+}
+
+.footer .wraper-footer .contato p{
+    margin-top: 20px;
+}
+
+.footer .direitos-reservados{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
