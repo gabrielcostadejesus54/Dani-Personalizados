@@ -1,0 +1,86 @@
+.catalago{
+    padding: 70px 2%;
+}
+
+.catalago nav .active{
+    background-color: var(--corPrincipal);
+    color: white;
+}
+
+.catalago nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.catalago nav ul li{
+    list-style: none;
+}
+
+.catalago nav ul li a{
+    text-decoration: none;
+    color: #65758B;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: var(--corSecundaria);
+}  
+
+.catalago .catalago-produtos{
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.catalago .catalago-produtos .produto{
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    min-height: 350px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.catalago .catalago-produtos .produto .img{
+    width: 100%;
+    padding-top: 80%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.catalago .catalago-produtos .produto .descricao{
+    padding: 20px;
+}
+
+.catalago .catalago-produtos .produto .descricao a{
+    width: 100%;
+    background-color: var(--corPrincipal);
+    display: block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.catalago .catalago-produtos .produto:hover a{
+    opacity: 1;
+}
+
+.catalago .catalago-produtos .produto span{
+    color: #65758B;
+    font-size: 14px;
+}
+
+.catalago .catalago-produtos .produto h4{
+    margin-top: 10px;
+}
