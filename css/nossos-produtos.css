@@ -1,0 +1,28 @@
+.nossos-produtos{
+    padding: 150px 2% 80px 2%;
+    background-color: var(--corSecundaria);
+    text-align: center;
+}
+
+.nossos-produtos p{
+    margin: 20px 0;
+}
+
+.nossos-produtos .search-box{
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.nossos-produtos input[type="search"]{
+    padding: 15px 10px  15px 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.nossos-produtos .search-box span{
+    position: absolute;
+    left: 10px;
+    top: 13px;
+}
