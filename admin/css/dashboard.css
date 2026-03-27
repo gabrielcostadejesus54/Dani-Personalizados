@@ -1,0 +1,119 @@
+body{
+    background-color: #f0f0f0;
+}
+
+header{
+    background-color: white;
+    padding: 20px 2%;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container a{
+    color: black;
+    text-decoration: none;
+    background-color: rgb(254, 166, 166);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.produtos{
+    padding: 100px 2%;
+}
+
+.produtos .cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.produtos .cabecalho button{
+    padding: 15px 20px;
+    border-radius: 7px;
+    border: 0;
+    background-color: #1c1f25;
+    color: white;
+    cursor: pointer;
+}
+
+.produtos .search-container{
+    position: relative;
+}
+
+.produtos .search{
+    width: 100%;
+    padding: 10px 0 10px 40px;
+    border-radius: 7px;
+    border: 0;
+}
+
+.produtos .search-container .icon{
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+.modal{
+    background-color: #1a1a1ea6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+.modal-content{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 7px;
+}
+
+.modal-content .topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-content .topo span{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-content .input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.modal-content .input-group label{
+    margin-bottom: 5px;
+}
+
+.modal-content .input-group input, .modal-content .input-group select{
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+
+.modal-content button{
+    padding: 15px 20px;
+    border-radius: 7px;
+    border: 0;
+    background-color: #1c1f25;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
