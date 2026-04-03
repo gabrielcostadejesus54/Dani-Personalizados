@@ -1,0 +1,68 @@
+body{
+    background-color: #F1F5F9;
+}
+
+.login{
+    max-width: 450px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.login .logo-devsime{
+    width: 150px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.login h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login p{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #64748B;
+}
+
+.login .input-group{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login .input-group label{
+    margin-bottom: 5px;
+    color: #64748B;
+}
+
+.login .input-group input{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login .input-group input:focus{
+    border-color: #1c1f25;
+    outline: none;
+}
+
+.login button{
+    width: 100%;
+    padding: 15px;
+    background-color: #1c1f25;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login button:hover{
+    background-color: #272E3F;
+}

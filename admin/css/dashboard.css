@@ -1,0 +1,264 @@
+body{
+    background-color: #f0f0f0;
+}
+
+header{
+    background-color: white;
+    padding: 20px 2%;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container a{
+    color: black;
+    text-decoration: none;
+    background-color: rgb(254, 166, 166);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.produtos{
+    padding: 100px 2%;
+}
+
+.produtos .cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.produtos .cabecalho button{
+    padding: 15px 20px;
+    border-radius: 7px;
+    border: 0;
+    background-color: #1c1f25;
+    color: white;
+    cursor: pointer;
+}
+
+.produtos .search-container{
+    position: relative;
+}
+
+.produtos .search{
+    width: 100%;
+    padding: 10px 0 10px 40px;
+    border-radius: 7px;
+    border: 0;
+}
+
+.produtos .search-container .icon{
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+.modal{
+    background-color: #1a1a1ea6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+.modal-content{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 7px;
+}
+
+.modal-content .topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-content .topo span{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-content .input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.modal-content .input-group label{
+    margin-bottom: 5px;
+}
+
+.modal-content .input-group input, .modal-content .input-group select{
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+
+.modal-content button{
+    padding: 15px 20px;
+    border-radius: 7px;
+    border: 0;
+    background-color: #1c1f25;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+
+.catalago-produtos{
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.catalago-produtos .produto{
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    min-height: 350px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.catalago-produtos .produto .img{
+    width: 100%;
+    padding-top: 80%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.catalago-produtos .produto .descricao{
+    padding: 20px;
+}
+
+.produto button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgb(244, 151, 151);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagina {
+    display: none ;
+}
+
+.pagina.ativa {
+    display: block;
+}
+
+.nav{
+    margin-top: 20px;
+}
+
+.nav a{
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: rgb(254, 166, 166);
+    color: white;
+}
+
+#galeria .img{
+    width: 100%;
+    max-width: 305px;
+    min-height: 305px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.area-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.form-galeria {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* caixa de upload */
+.upload-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 100px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #fafafa;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.upload-box:hover {
+    border-color: #007bff;
+    background: #f0f8ff;
+}
+
+/* esconde input real */
+.upload-box input {
+    display: none;
+}
+
+/* botão */
+.btn-enviar {
+    padding: 10px 18px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-enviar:hover {
+    background: #0056b3;
+}
+
+.preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    border: 1px solid #ddd;
+}

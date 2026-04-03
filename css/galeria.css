@@ -1,0 +1,31 @@
+.galeria{
+    padding-top: 160px;
+    padding-bottom: 80px;
+    background-color: var(--corSecundaria);
+    text-align: center;
+}
+
+.galeria h2{
+    margin-bottom: 20px;
+}
+
+.fotos-galeria{
+    padding: 80px 2%;   
+}
+
+.fotos-galeria .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fotos-galeria .img{
+    width: 100%;
+    max-width: 305px;
+    min-height: 305px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
