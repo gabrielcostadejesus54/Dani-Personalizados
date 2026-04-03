@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require 'conexao.php';
 
 $usuario = $_POST['usuario'] ?? '';
@@ -32,7 +31,7 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();
 
-    if ($senha == $user['senha']) {
+    if (password_verify($senha, $user['senha'])) {
 
         $_SESSION['usuario_id'] = $user['id'];
         $_SESSION['usuario'] = $user['usuario'];

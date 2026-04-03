@@ -1,10 +1,5 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['usuario_id'])) {
-    header("Location: index.php");
-    exit;
-}
+require 'php/protecao.php';
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +19,49 @@ if (!isset($_SESSION['usuario_id'])) {
             </div>
         </header>
 
-        <main class="produtos" id="produtos">
+        <div class="nav">
+            <div class="container">
+                <a href="#" data-pagina="produtos">Produtos</a>
+                <a href="#" data-pagina="galeria">Galeria</a>
+            </div>
+        </div>
+
+        <main>
+            <div id="galeria" class="container pagina">
+                <div class="cabecalho">
+                    <h2>Galeria</h2>
+                     <form action="php/salvar_galeria.php" method="POST" enctype="multipart/form-data" class="form-galeria">
+    
+                    <label for="imagem" class="upload-box">
+                        <span id="texto-upload">📸 Clique para adicionar imagem</span>
+                        <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                    </label>
+
+                    <!-- PREVIEW -->
+                    <div class="preview" id="preview"></div>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
+
+                </form>
+                </div>
+                <div class="area-galeria">
+                    <?php
+                    require 'php/conexao.php';
+
+                    $sql = "SELECT * FROM galeria ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    while($img = $result->fetch_assoc()):
+                    ?>
+
+                        <div class="img" style="background-image: url('<?= $img['imagem'] ?>');"></div>
+
+                    <?php endwhile; ?>
+                </div>
+            </div>
+        </main>
+
+        <main class="produtos pagina ativa" id="produtos">
             <div class="container">
                 <div class="cabecalho">
                     <h2>Produtos</h2>
@@ -32,9 +69,42 @@ if (!isset($_SESSION['usuario_id'])) {
                 </div>
                 <div class="search-container">
                     <span class="icon">🔍</span>
-                    <input type="text" placeholder="Buscar produtos..." class="search">
+                    <input type="search" placeholder="Buscar produtos..." class="search" id="search">
                 </div>
-                <div class="area-produtos">
+                <div class="area-produtos catalago-produtos">
+
+                <?php
+                    require 'php/conexao.php';
+
+                    $sql = "SELECT * FROM produtos ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0):
+                        while($produto = $result->fetch_assoc()):
+                    ?>
+
+                        <div class="produto">
+                            <div class="img" style="background-image: url('<?= $produto['imagem'] ?>');"></div>
+
+                            <div class="descricao">
+                                <span><?= $produto['categoria'] ?></span>
+                                <h4 class="nome-produto"><?= $produto['nome'] ?></h4>
+
+                                <form action="php/excluir_produto.php" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir?')">
+                                    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+                                    <button type="submit">Excluir</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        
+
+                            <?php
+                                endwhile;
+                            else:
+                                echo "<p>Nenhum produto cadastrado.</p>";
+                            endif;
+                        ?>
                 </div>
             </div>
         </main>
@@ -45,10 +115,10 @@ if (!isset($_SESSION['usuario_id'])) {
                     <p>Novo Produto</p>
                     <span class="close">&times;</span>
                 </div>
-                <form id="produto-form">
+                <form action="php/salvar_produto.php" method="POST" id="produto-form" enctype="multipart/form-data">
                     <div class="input-group">
                         <label for="produto-imagem">Imagem do Produto</label>
-                        <input type="file" id="produto-imagem" name="produto-imagem" required>
+                        <input type="file" accept="image/*" id="produto-imagem" name="produto-imagem" required>
                     </div>
                     <div class="input-group">
                         <label for="produto-nome">Nome do Produto</label>
